@@ -14,9 +14,9 @@ int main() {
     printf("cpy2: %s\n", cpy2);
     sterncpy(cpy1, cpyorig, sizeof(cpy1) - 1);
     strncpy(cpy2, cpyorig, sizeof(cpy2) - 1);
-    printf("===after sterncpy s into cpy1===\n");
+    printf("===after sterncpy cpyorig into cpy1===\n");
     printf("cpy1: %s\n", cpy1);
-    printf("===after strncpy s into cpy2===\n");
+    printf("===after strncpy cpyorig into cpy2===\n");
     printf("cpy2: %s\n", cpy2);
 
     char cat1[] = " good person";
