@@ -7,7 +7,7 @@ int main() {
     char cpyorig[] = "hello there";
     char cpy1[100];
     char cpy2[100];
-    printf("****Testing sterrcpy****\n");
+    printf("\n****Testing sterrcpy****\n");
     printf("ORIGINAL STRINGS\n");
     printf("cpyorig: %s\n", cpyorig);
     printf("cpy1: %s\n", cpy1);
@@ -22,7 +22,7 @@ int main() {
     char cat1[] = " good person";
     char cat2[100] = "hello there";
     char cat3[100] = "hello there";
-    printf("****Testing sterncat****\n");
+    printf("\n****Testing sterncat****\n");
     printf("ORIGINAL STRINGS\n");
     printf("cat1: %s\n", cat1);
     printf("cat2: %s\n", cat2);
@@ -34,15 +34,45 @@ int main() {
     printf("after strncat cat1 onto cat3\n");
     printf("\tcat3: %s\n", cat3);
 
-    printf("****Testing sterrcomp****\n");
+    printf("\n****Testing sterrcomp****\n");
     
     char hello[] = "HfLLO";
     char hello2[] = "HELlo";
 
     char ayy[] = "";
     char ayt[] = "1";
+    char att[] = "12";
 
 
-    printf("Comparing %s and %s: %d\n", hello, hello2, sterrcmp(hello, hello2));
+    printf("sterrcmping %s and %s: %d\n", hello, hello2, sterrcmp(hello, hello2));
+    printf("strcmping %s and %s: %d\n", hello, hello2, strcmp(hello, hello2));
 
+    printf("sterrrcmping  %s and %s: %d\n", hello, hello, sterrcmp(hello, hello));
+    printf("strcmping  %s and %s: %d\n", hello, hello, strcmp(hello, hello));
+
+    printf("sterrrcmping  %s and %s: %d\n", ayt, ayy, sterrcmp(hello, hello));
+    printf("strcmping  %s and %s: %d\n", ayt, ayy, strcmp(hello, hello));
+
+    printf("sterrrcmping  %s and %s: %d\n", ayt, ayy, sterrcmp(ayt, ayy));
+    printf("strcmping  %s and %s: %d\n", ayt, ayy, strcmp(ayt, ayy));
+
+    printf("sterrrcmping  %s and %s: %d\n", ayt, att, sterrcmp(ayt, att));
+    printf("strcmping  %s and %s: %d\n", ayt, att, strcmp(ayt, att));
+
+    printf("\n****Testing sterrchr****\n");
+    printf("sterrchr finding \'%c\' in %s: %p\n", 'H', hello, sterrchr(hello, 'H'));
+    printf("strchr finding \'%c\' in %s: %p\n", 'H', hello, strchr(hello, 'H'));
+
+    printf("sterrchr finding \'%c\' in %s: %p\n", 'o', hello, sterrchr(hello, 'o'));
+    printf("strchr finding \'%c\' in %s: %p\n", 'o', hello, strchr(hello, 'o'));
+
+    printf("sterrchr finding \'%c\' in %s: %p\n", 'L', hello, sterrchr(hello, 'L'));
+    printf("strchr finding \'%c\' in %s: %p\n", 'L', hello, strchr(hello, 'L'));
+
+    printf("\n****Testing sterrlen****\n");
+    printf("sterrlen of %s: %d\n", ayy, sterrlen(ayy));
+    printf("strlen of %s: %d\n", ayy, strlen(ayy));
+    
+    printf("sterrlen of %s: %d\n", hello, sterrlen(hello));
+    printf("strlen of %s: %d\n", hello, strlen(hello));
 }

@@ -1,5 +1,5 @@
-all: main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c stringy.h 
-	gcc -o stringy main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c
+all: main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c sterrlen.c stringy.h 
+	gcc -o stringy main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c sterrlen.c
 
 run: all
 	./stringy
