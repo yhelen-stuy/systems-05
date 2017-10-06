@@ -34,4 +34,15 @@ int main() {
     printf("after strncat cat1 onto cat3\n");
     printf("\tcat3: %s\n", cat3);
 
+    printf("****Testing sterrcomp****\n");
+    
+    char hello[] = "HfLLO";
+    char hello2[] = "HELlo";
+
+    char ayy[] = "";
+    char ayt[] = "1";
+
+
+    printf("Comparing %s and %s: %d\n", hello, hello2, sterrcmp(hello, hello2));
+
 }

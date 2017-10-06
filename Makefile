@@ -1,7 +1,7 @@
-all: main.c sterrcpy.c sterncat.c stringy.h
-	gcc -o stringy main.c sterrcpy.c sterncat.c
+all: main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c stringy.h 
+	gcc -o stringy main.c sterrcpy.c sterncat.c sterrcmp.c sterrchr.c
 
-run:
+run: all
 	./stringy
 
 clean:
